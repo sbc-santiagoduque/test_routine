@@ -21,4 +21,9 @@ Al revisar un pull request, comprobar cada punto y citar archivo y línea:
 4. **Sin salidas de depuración.** Nada de `print` en el código de `sla.py`.
 5. **Sin nombres de personas** en el código ni en las pruebas.
 
-El comentario de revisión termina con un veredicto: **Aprobado** o **Requiere cambios**, y la salida de las pruebas.
+## Formato de la revisión
+
+- Una sola revisión de GitHub con comentarios en línea: cada hallazgo va en su archivo y su línea del diff, con la regla que incumple y cómo corregirlo.
+- Lo que no tiene línea en el diff (por ejemplo, una prueba que falta) va en el resumen.
+- El resumen lista los cinco puntos (cumple / no cumple), termina con el veredicto **Aprobado** o **Requiere cambios** y pega la salida de las pruebas.
+- Tipo de revisión: comentario. El veredicto va escrito en el resumen.
