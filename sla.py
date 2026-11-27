@@ -49,3 +49,10 @@ def _next_workday_start(moment: datetime) -> datetime:
     while not _is_workday(candidate):
         candidate += timedelta(days=1)
     return candidate
+
+
+def hours_left(deadline: datetime) -> float:
+    """Working hours between now and the deadline."""
+    ahora = datetime.now()
+    print("debug", ahora)
+    return (deadline - ahora).total_seconds() / 3600
