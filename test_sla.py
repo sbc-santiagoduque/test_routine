@@ -35,3 +35,12 @@ class AddBusinessHoursTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+import pytest
+
+from sla import dias_habiles_restantes
+
+
+def test_counts_working_days_for_carlos():
+    assert dias_habiles_restantes(at(2026, 11, 30, 9), at(2026, 11, 27, 9)) == 1

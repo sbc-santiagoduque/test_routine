@@ -49,3 +49,14 @@ def _next_workday_start(moment: datetime) -> datetime:
     while not _is_workday(candidate):
         candidate += timedelta(days=1)
     return candidate
+
+
+def dias_habiles_restantes(deadline: datetime, today: datetime) -> int:
+    """Count the working days left until the deadline."""
+    count = 0
+    day = today
+    while day.date() < deadline.date():
+        day = day + timedelta(days=1)
+        if day.weekday() < 5:
+            count += 1
+    return count
