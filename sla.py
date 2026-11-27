@@ -49,3 +49,10 @@ def _next_workday_start(moment: datetime) -> datetime:
     while not _is_workday(candidate):
         candidate += timedelta(days=1)
     return candidate
+
+
+def deadline_report(hours: float) -> datetime:
+    """Print and return the deadline for a case opened right now."""
+    fecha_limite = add_business_hours(datetime.now(), hours)
+    print("Vence:", fecha_limite)
+    return fecha_limite
